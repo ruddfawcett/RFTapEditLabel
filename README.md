@@ -38,19 +38,42 @@ That's really it, you can then use some of the methods below.  You can also alwa
 Hope you enjoy it!
 
 ## Methods
-- `- (id)initWithFrame:(CGRect)frame secureTextEntry:(BOOL)secureTextEntry;`
-- `- (void)simulateTap;`
-- `- (void)toggleEditable;`
-- `- (void)setEditable:(BOOL)editable;`
-- `- (void)setLabelTextCustom:(NSString *)labelText;`
-- `- (void)setPlaceholderText:(NSString *)placeholderText;`
-- `- (void)toggleMask;`
-- `- (void)toggleMaskForTime:(NSTimeInterval)time;`
-- `- (void)toggleMaskForTime:(NSTimeInterval)time onToggle:(void (^)(void))whileToggled completion:(void (^)(void))completionBlock;`
-    - I have never really used blocks before, and am new to controls, so this works, but may not be implemented properly
-- `- (void)setMaskWithLength:(NSUInteger)maskLength;`
-- `- (NSString*)maskString:(NSUInteger)maskLength;`
 
+```objective-c
+- (id)initWithFrame:(CGRect)frame secureTextEntry:(BOOL)secureTextEntry;
+    // standard init, except with an option for a password text field.
+
+- (void)simulateTap;
+    // tapLabel programatically
+
+- (void)toggleEditable;
+    // if editable, set uneditable, if uneditable, set editable
+
+- (void)setEditable:(BOOL)editable;
+    // set editable without toggling
+
+- (void)setLabelTextCustom:(NSString *)labelText;
+    // use this when setting text AND a placeholder (otherwise unnecessary)
+
+- (void)setPlaceholderText:(NSString *)placeholderText;
+    // use this for setting a placeholder
+
+- (void)toggleMask;
+    // toggle mask, show dots or hide them
+
+- (void)toggleMaskForTime:(NSTimeInterval)time;
+    // toggle mask for time, show dots for x seconds, then hide
+
+- (void)toggleMaskForTime:(NSTimeInterval)time onToggle:(void (^)(void))whileToggled completion:(void (^)(void))completionBlock;
+    // I have never really used blocks before, and am new to controls, so this works, but may not be implemented properly
+    // this allows you to set some properties while the label is being toggled, but then you can reset them
+
+- (void)setMaskWithLength:(NSUInteger)maskLength;
+    // change length of mask for security (by default label sets mask to length of text)
+
+- (NSString*)maskString:(NSUInteger)maskLength;
+    // return a masked string with the string length (set maskLength) or with  a custom maskLength (like setMaskWithLength)
+```
 
 ##Screenshots
 
