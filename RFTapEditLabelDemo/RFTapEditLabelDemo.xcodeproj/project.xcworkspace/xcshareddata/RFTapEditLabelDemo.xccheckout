@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2A946410-B75E-4741-B40A-F7ED11EFD61B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RFTapEditLabelDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7204EEBB-3F56-4551-A3E0-2F52FF25EC4F</key>
+		<string>https://github.com/rexfinn/RFTapEditLabel.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RFTapEditLabelDemo/RFTapEditLabelDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7204EEBB-3F56-4551-A3E0-2F52FF25EC4F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rexfinn/RFTapEditLabel.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7204EEBB-3F56-4551-A3E0-2F52FF25EC4F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7204EEBB-3F56-4551-A3E0-2F52FF25EC4F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RFTapEditLabel</string>
+		</dict>
+	</array>
+</dict>
+</plist>
