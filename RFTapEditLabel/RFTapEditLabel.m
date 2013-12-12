@@ -10,6 +10,8 @@
 
 @interface RFTapEditLabel ()
 
+
+
 @property (strong, nonatomic) UIAlertView *alertView;
 
 @property (nonatomic, readwrite) BOOL secureTextEntry;
@@ -35,11 +37,39 @@
                                       cancelButtonTitle:@"Cancel"
                                       otherButtonTitles:@"Save", nil];
         _alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
-        
+
         _secureTextEntry = secureTextEntry;
         _editable = YES;
     }
     return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if(self = [super initWithCoder:aDecoder]){
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelWasTapped)];
+        [self addGestureRecognizer:tapGesture];
+        self.userInteractionEnabled = YES;
+        
+        _alertView = [[UIAlertView alloc] initWithTitle:@"Edit Label"
+                                                message:nil
+                                               delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                      otherButtonTitles:@"Save", nil];
+        _alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        _editable = YES;
+    }
+    return self;
+}
+
+
+-(void)awakeFromNib
+{
+    //More than likely was configured through
+    if(!_alertView){
+        
+    }
 }
 
 -(void)setPlaceholderText:(NSString*)placeholder {
