@@ -42,11 +42,13 @@ To use RFTabEditCell you'll change UITableViewCell the Custom Class to RFTabEdit
 
 To use RFTabEditLabel, you'll change the UILabel Custom Class to RFTabEditLabel
 
-You'll want to set User Defined Runtime Attributes to control things like label text, placeholder text and secure
+You'll want to set User Defined Runtime Attributes to control things like label text, placeholder text and secure if you use multiple prototype cells. The values will be picked up in the RFTabEditCell or RFTabEditLabel awakeFromNib
 
 * secureTextEntry   Boolean
 * customLabelText   String
 * customPlaceHolderText     String
+
+To reuse prototype cells with different content then populate the fields from a property file plist.
 
 RFTabEditCell uses the following constraints for alignment within the UITableView
 
