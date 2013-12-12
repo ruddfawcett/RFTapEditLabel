@@ -25,13 +25,37 @@ Just drag the RFTapEditLabel folder into your project and import it.
 // #import "RFTapEditCell.h" (a simple cell extension)
 ```
 
-## Use
+## Use programmatically
 
 RFTapEditLabel is very simple to install and use.  Just init the `RFTapEditLabel` with or without securTextEntry, and with a frame (the way you normally would).
+
 
 ```objective-c
     RFTapEditLabel *tapLabel = [[RFTapEditLabel alloc] initWithFrame:CGRectMake(20, 100, 180, 31) secureTextEntry:NO];
 ```
+
+## Use in Storyboard
+
+You can either use RFTabEditCell or RFTapEditLabel inside of Storyboard. 
+
+To use RFTabEditCell you'll change UITableViewCell the Custom Class to RFTabEditCell
+
+To use RFTabEditLabel, you'll change the UILabel Custom Class to RFTabEditLabel
+
+You'll want to set User Defined Runtime Attributes to control things like label text, placeholder text and secure
+
+* secureTextEntry   Boolean
+* customLabelText   String
+* customPlaceHolderText     String
+
+RFTabEditCell uses the following constraints for alignment within the UITableView
+
+```objective-c
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-15-[tapTextLabel]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tapTextLabel]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.contentView setNeedsUpdateConstraints];
+```
+
 
 That's really it, you can then use some of the methods below.  You can also always grab any of the text as well.  Also, you can initialize the `RFTapEditCell`, which just sets the textLabel of the cell to a custom label.
 
