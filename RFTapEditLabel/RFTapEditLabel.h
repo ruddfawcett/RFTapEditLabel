@@ -2,8 +2,8 @@
 //  RFTapEditLabel.h
 //  RFTapEditLabelDemo
 //
-//  Created by Rex Finn on 11/25/13.
-//  Copyright (c) 2013 Rex Finn. All rights reserved.
+//  Created by Rudd Fawcett on 11/25/13.
+//  Copyright (c) 2013 Rudd Fawcett. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

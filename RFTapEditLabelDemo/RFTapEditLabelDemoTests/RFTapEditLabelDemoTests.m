@@ -2,8 +2,8 @@
 //  RFTapEditLabelDemoTests.m
 //  RFTapEditLabelDemoTests
 //
-//  Created by Rex Finn on 11/26/13.
-//  Copyright (c) 2013 Rex Finn. All rights reserved.
+//  Created by Rudd Fawcett on 11/26/13.
+//  Copyright (c) 2013 Rudd Fawcett. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
