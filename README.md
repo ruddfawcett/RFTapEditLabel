@@ -13,7 +13,7 @@ UILabel subclass with UIAlertView editing. Support for masked passwords and plac
 
 ```ruby
 platform :ios, '7.0'
-pod "RFTapEditLabel", "~> 1.0"
+pod "RFTapEditLabel", "~> 1.2"
 ```
 
 ### Installation without CocoaPods
