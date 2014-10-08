@@ -28,7 +28,7 @@
         
         _secureTextEntry = secureTextEntry;
         
-        _tapTextLabel = [[RFTapEditLabel alloc] initWithFrame:CGRectMake(15, 9, self.bounds.size.width-30, self.bounds.size.height-18) secureTextEntry:secureTextEntry];
+        _tapTextLabel = [[RFTapEditLabel alloc] initWithFrame:CGRectMake(15, 9, self.bounds.size.width-30, self.bounds.size.height-18) title:@"Edit Label" secureTextEntry:secureTextEntry];
         
         self.accessoryView = _tapTextLabel;
     }
@@ -48,7 +48,7 @@
 -(void)awakeFromNib
 {
     if(!_tapTextLabel){
-        _tapTextLabel = [[RFTapEditLabel alloc] initWithFrame:CGRectMake(self.contentView.bounds.origin.x, self.contentView.bounds.origin.y, self.contentView.bounds.size.width - 30, self.contentView.bounds.size.height) secureTextEntry:_secureTextEntry];
+        _tapTextLabel = [[RFTapEditLabel alloc] initWithFrame:CGRectMake(self.contentView.bounds.origin.x, self.contentView.bounds.origin.y, self.contentView.bounds.size.width - 30, self.contentView.bounds.size.height) title:@"Edit Label" secureTextEntry:_secureTextEntry];
         //Set label text
         [_tapTextLabel setLabelTextCustom:_customLabelText];
 
