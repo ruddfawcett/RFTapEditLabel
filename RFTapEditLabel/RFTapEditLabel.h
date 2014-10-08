@@ -20,8 +20,8 @@
 
 @property (nonatomic, assign) NSUInteger maskLength;
 
-- (id)initWithFrame:(CGRect)frame secureTextEntry:(BOOL)secureTextEntry;
--(id)initWithCoder:(NSCoder *)aDecoder AndSecureTextEntry:(BOOL)secureTextEntry;
+- (id)initWithFrame:(CGRect)frame title:(NSString *)title secureTextEntry:(BOOL)secureTextEntry;
+- (id)initWithCoder:(NSCoder *)aDecoder AndSecureTextEntry:(BOOL)secureTextEntry;
 - (void)simulateTap;
 
 - (void)toggleEditable;
