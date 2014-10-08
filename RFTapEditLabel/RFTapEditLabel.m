@@ -153,6 +153,9 @@
     if (alertView == _alertView) {
         if (buttonIndex == 1) {
             _labelText = _textField.text;
+            if ([self.delegate respondsToSelector:@selector(didEditLabel:)]) {
+                [self.delegate didEditLabel:self];
+            }
             
             if (_labelText.length != 0) {
                 self.textColor = [UIColor blackColor];
