@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class RFTapEditLabel;
+
+@protocol RFTapEditLabelDelegate <NSObject>
+@optional
+
+- (void)didEditLabel:(RFTapEditLabel *)label;
+
+@end
+
 @interface RFTapEditLabel : UILabel <UIAlertViewDelegate>
+
+@property (weak, nonatomic) id<RFTapEditLabelDelegate> delegate;
 
 @property (strong, nonatomic) UITextField *textField;
 
