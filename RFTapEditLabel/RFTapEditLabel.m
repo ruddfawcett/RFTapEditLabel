@@ -23,7 +23,7 @@
 
 @implementation RFTapEditLabel
 
-- (id)initWithFrame:(CGRect)frame secureTextEntry:(BOOL)secureTextEntry
+- (id)initWithFrame:(CGRect)frame title:(NSString *)title secureTextEntry:(BOOL)secureTextEntry
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -31,7 +31,7 @@
         [self addGestureRecognizer:tapGesture];
         self.userInteractionEnabled = YES;
         
-        _alertView = [[UIAlertView alloc] initWithTitle:@"Edit Label"
+        _alertView = [[UIAlertView alloc] initWithTitle:title
                                                 message:nil
                                                delegate:self
                                       cancelButtonTitle:@"Cancel"
