@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class RFTapEditLabel;
+
+@protocol RFTapEditLabelDelegate <NSObject>
+@optional
+
+- (void)didEditLabel:(RFTapEditLabel *)label;
+
+@end
+
 @interface RFTapEditLabel : UILabel <UIAlertViewDelegate>
+
+@property (weak, nonatomic) id<RFTapEditLabelDelegate> delegate;
 
 @property (strong, nonatomic) UITextField *textField;
 
@@ -20,8 +31,8 @@
 
 @property (nonatomic, assign) NSUInteger maskLength;
 
-- (id)initWithFrame:(CGRect)frame secureTextEntry:(BOOL)secureTextEntry;
--(id)initWithCoder:(NSCoder *)aDecoder AndSecureTextEntry:(BOOL)secureTextEntry;
+- (id)initWithFrame:(CGRect)frame title:(NSString *)title secureTextEntry:(BOOL)secureTextEntry;
+- (id)initWithCoder:(NSCoder *)aDecoder AndSecureTextEntry:(BOOL)secureTextEntry;
 - (void)simulateTap;
 
 - (void)toggleEditable;

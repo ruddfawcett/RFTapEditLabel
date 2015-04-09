@@ -23,7 +23,7 @@
 
 @implementation RFTapEditLabel
 
-- (id)initWithFrame:(CGRect)frame secureTextEntry:(BOOL)secureTextEntry
+- (id)initWithFrame:(CGRect)frame title:(NSString *)title secureTextEntry:(BOOL)secureTextEntry
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -31,7 +31,7 @@
         [self addGestureRecognizer:tapGesture];
         self.userInteractionEnabled = YES;
         
-        _alertView = [[UIAlertView alloc] initWithTitle:@"Edit Label"
+        _alertView = [[UIAlertView alloc] initWithTitle:title
                                                 message:nil
                                                delegate:self
                                       cancelButtonTitle:@"Cancel"
@@ -153,6 +153,9 @@
     if (alertView == _alertView) {
         if (buttonIndex == 1) {
             _labelText = _textField.text;
+            if ([self.delegate respondsToSelector:@selector(didEditLabel:)]) {
+                [self.delegate didEditLabel:self];
+            }
             
             if (_labelText.length != 0) {
                 self.textColor = [UIColor blackColor];
