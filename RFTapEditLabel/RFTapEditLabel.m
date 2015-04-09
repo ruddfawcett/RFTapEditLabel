@@ -104,6 +104,13 @@
                 _textField.placeholder = self.text;
         }
         
+        if (_alertTitle) {
+            _alertView.title = _alertTitle;
+        }
+        else {
+            _alertTitle.title = @"Edit Label";
+        }
+        
         [_alertView show];
     }
 }
